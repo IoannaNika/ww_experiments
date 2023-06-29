@@ -1,0 +1,37 @@
+# Data
+data/*.tsv
+data/.fasta
+
+Experiments/**/reference_set/**
+Experiments/**/reference_sets/**
+**/benchmarks/**
+**/benchmarks_*/**
+**/*.bam
+**/*.sam
+**/*.fasta
+**/*.fastq
+**/*.fa
+**/*.log
+**/*.tsv
+**/*.h5
+**/run_info.json
+**/*.out
+**/lineages.txt
+**/*.kallisto_idx
+
+# exclude pattern
+
+# macOS
+
+.DS_Store
+
+# Python
+__pycache__
+
+# modules
+*.egg-info
+
+
+# exceptions
+!Experiments/Sub_lineages_Experiments/Omicron/true_benchmark_abundances*.tsv
+!Experiments/Sub_lineages_Experiments/Omicron/true_benchmark_abundances_less.tsv
