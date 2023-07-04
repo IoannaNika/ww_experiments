@@ -9,4 +9,4 @@
 #SBATCH --mail-type=END
 #SBATCH --gres=gpu
 
-bash build_reference_sets_hpc.sh
+bash build_reference_sets.sh
