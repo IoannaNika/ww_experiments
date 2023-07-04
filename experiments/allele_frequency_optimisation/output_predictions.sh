@@ -51,7 +51,7 @@ for datasets in \
 "North_America/Global ../../../data/Proximity_Experiments/HPC/North_America/benchmarks_who/benchmarks/Connecticut/1" ; do \
 
   set -- $datasets
-  for  allele_freq in 0.0; do \
+  for  allele_freq in 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0; do \
     bash ../../../manuscript/run_kallisto_ref_sets_who.sh $2 0 ../../../data/Allele_Frequency_Optimization/reference_sets/$1_${allele_freq} 0.1 ${1}/${allele_freq} B.1.1.7_sequence
   done
 done
