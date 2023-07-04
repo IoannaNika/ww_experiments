@@ -1,6 +1,6 @@
 mkdir -p benchmarks_who
-metadata="../../data/Proximity_Experiments/HPC/North_America/benchmarks_who/benchmarks/Connecticut/1/metadata.tsv"
-sequences="../../data/Proximity_Experiments/HPC/North_America/benchmarks_who/benchmarks/Connecticut/1/sequences.fasta"
+metadata="../../data/Proximity_Experiments/North_America/benchmarks_who/benchmarks/Connecticut/1/metadata.tsv"
+sequences="../../data/Proximity_Experiments/North_America/benchmarks_who/benchmarks/Connecticut/1/sequences.fasta"
 
 IFS=','
 for state in "Connecticut,Connecticut,2021-04-30"; do \
