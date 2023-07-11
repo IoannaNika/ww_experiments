@@ -6,7 +6,7 @@ for ref_set in "Connecticut" "USA" "North_America"; do \
 
         for seed in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20; do \
             ref_set_path="reference_sets/$ref_set/${start_date}_till_${end_date}/processed"        
-            bash ../../../manuscript/run_kallisto_ref_sets_downsampling.sh Connecticut/$seed/ 0 $ref_set_path 0.1 $ref_set/${start_date}_till_${end_date} AY.103_sequence 
+            bash ../../../experiment_specific_scripts/run_kallisto_ref_sets.sh Connecticut/$seed/ 0 $ref_set_path 0.1 $ref_set/${start_date}_till_${end_date} AY.103_sequence ../../../
         done
     done
 done
