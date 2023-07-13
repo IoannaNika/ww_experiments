@@ -6,11 +6,23 @@ Varius experiments are performed in order to determine the influence of referenc
 Specifically, we examine the impact of various sequence properties such as source location, collection date, observed allele frequencies, and N-content on prediction accuracy of SARS-CoV-2 lineages in simulated wastewater data. Additionaly, we investigate how excluding older sequences can potentially improve abundance predictions. We perform predictions at different levels of granularity to identify when abundance estimates are most reliable. Finally, we perform an experiment in which predictions are made with just a subset of available reference sequences and use multiple sequences for the simulation of the lineage to be measured in another experiment to test prediction ability on more resalistic settings. 
 
 ## Workflow and Scripts
+1. Within the experiment folders the files `build_reference_sets.sh` (or similarly named) are used to run the pre-processing and selection for a given dataset as well as build the kallisto index based on the selected reference sequences. 
+
+2. Within the experiment folders the files `produce_ww.sh` (or similarly named) are used to produce the simulated wastewater data given a dataset and the sequence(s) of the linnage/VOC to be measured at differenced simulated abundances.
+
+3. Within the folder `experiment_scripts` the files `run_kallisto_ref_sets.sh` (or similarly named) are used to produce the abundance estimates given the simulated wastewater data (step 2) and the kallisto index (step 1). 
+
+4. Finally to process the output of step 3 (abundance quantification), the files `output_predictions.sh` (or similarly named) found within the folders of each experiment need to be run. 
+
+
+Notes:
+1. Helper scripts are found in `utils`.
+2. `who` within file names denotes abundance estimates made at VOC level instead of lineage level.
+3. Files related to the VLQ pipeline are found in the `pipeline` folder while their adjusted version for the `next regions` datasets is found in `experiment_scripts/global_next_regions`.
+
+The workflow is summarised in the figure below: 
+
 ![plot](pipeline.png)
-
-
-
-
 
 
 ## Referenes
