@@ -9,7 +9,7 @@ from csv import writer
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Merge fasta and metadata files")
+    parser = argparse.ArgumentParser(description="Merge multiple fasta and metadata files")
     parser.add_argument('--dir', dest = 'dir', required=True, type=str, help="data directory, merges metadata and fasta contained in the directory and its subdirectories")
     args = parser.parse_args()
 

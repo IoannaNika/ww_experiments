@@ -10,7 +10,7 @@ from helper_functions import filter_fasta
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Filters dataset absed on date")
+    parser = argparse.ArgumentParser(description="Filters dataset based on date")
     parser.add_argument('--m', dest = 'metadata', required=True, type=str, help="relative path to metadata file")
     parser.add_argument('--f', dest = 'fasta', required=True, type=str, help="relative path to fasta file")
     parser.add_argument('--dir_name', dest = 'dir_name', required=True, type=str, help="directory of dataset to be created")
