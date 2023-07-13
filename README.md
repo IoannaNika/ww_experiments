@@ -1,14 +1,14 @@
 This repository contains code used for the SARS-CoV-2 variant abundance estimation using the VLQ pipeline [1] in simulated wastewater data.
 
 
-Varius experiments are performed in order to determine the influence of reference set design choices on the abundance estimation accuracy. The relevant scripts and other files for the experiments performed can be found under the folder  `experiments`. 
+Various experiments are performed to determine the influence of reference set design choices on the accuracy of abundance estimation. The relevant scripts and other files for the experiments performed can be found under the folder  `experiments`. 
 
-Specifically, we examine the impact of various sequence properties such as source location, collection date, observed allele frequencies, and N-content on prediction accuracy of SARS-CoV-2 lineages in simulated wastewater data. Additionaly, we investigate how excluding older sequences can potentially improve abundance predictions. We perform predictions at different levels of granularity to identify when abundance estimates are most reliable. Finally, we perform an experiment in which predictions are made with just a subset of available reference sequences and use multiple sequences for the simulation of the lineage to be measured in another experiment to test prediction ability on more resalistic settings. 
+Specifically, we examine the impact of various sequence properties such as source location, collection date, observed allele frequencies, and N-content on prediction accuracy of SARS-CoV-2 lineages in simulated wastewater data. Additionally, we investigate how excluding older sequences can potentially improve abundance predictions. We perform predictions at different levels of granularity to identify when abundance estimates are most reliable. Finally, we perform an experiment in which predictions are made with just a subset of available reference sequences and use multiple sequences to simulate the lineage to be measured in another experiment to test prediction ability in more realistic settings. 
 
 ## Workflow and Scripts
-1. Within the experiment folders the files `build_reference_sets.sh` (or similarly named) are used to run the pre-processing and selection for a given dataset as well as build the kallisto index based on the selected reference sequences. 
+1. Within the experiment folders the files `build_reference_sets.sh` (or similarly named) are used to run the pre-processing and selection for a given dataset as well as build the Kallisto index based on the selected reference sequences. 
 
-2. Within the experiment folders the files `produce_ww.sh` (or similarly named) are used to produce the simulated wastewater data given a dataset and the sequence(s) of the linnage/VOC to be measured at differenced simulated abundances.
+2. Within the experiment folders the files `produce_ww.sh` (or similarly named) are used to produce the simulated wastewater data given a dataset and the sequence(s) of the lineage/VOC to be measured at different simulated abundances.
 
 3. Within the folder `experiment_scripts` the files `run_kallisto_ref_sets.sh` (or similarly named) are used to produce the abundance estimates given the simulated wastewater data (step 2) and the kallisto index (step 1). 
 
@@ -17,7 +17,7 @@ Specifically, we examine the impact of various sequence properties such as sourc
 
 Notes:
 1. Helper scripts are found in `utils`.
-2. `who` within file names denotes abundance estimates made at VOC level instead of lineage level.
+2. `who` within file names denotes abundance estimates made at the VOC level instead of the lineage level.
 3. Files related to the VLQ pipeline are found in the `pipeline` folder while their adjusted version for the `next regions` datasets is found in `experiment_scripts/global_next_regions`.
 
 The workflow is summarised in the figure below: 
